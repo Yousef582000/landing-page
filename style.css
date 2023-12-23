@@ -1,0 +1,242 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 5%;
+    background-color: transparent;
+    display: flex;
+   z-index: 100;
+    align-items: center;
+}
+.logo{
+    font-size: 30px;
+    color: #fff;
+    font-weight: 700;
+}
+.socail{
+    margin: 0 auto 0 50px;
+
+}
+.socail a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: solid 2px #fff;
+border-radius: 8px;
+margin-right: 15px;
+transition: .4s;
+}
+.socail a:hover{
+    background: #fff;}
+.socail a i{
+    font-size: 20px;
+    color: #fff;
+    transition: .4s;
+}
+.socail a:hover i{
+    color: #444;
+}
+.bar a{
+    font-size: 20px;
+    color: #444;
+    padding: 8px 10px;
+    border-radius: 20px;
+    font-weight: 500;
+    margin-left: 35px;
+    text-shadow: 0 0 10px #fff;
+    background: #fff;
+    transition: .5s;
+}
+
+.bar a:hover{
+    background-color: transparent;
+    border: solid 2px #fff;
+    color: #fff;
+}
+
+.banner{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.slider .slide{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+}
+.slide img{
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+object-fit: cover;
+pointer-events: none;
+opacity: 0;
+transition: .3s ease;
+
+}
+
+.slide.active img{
+opacity: 1;
+}
+
+.slide .left-info{
+    position: absolute;
+    top: 0;
+    left:0;
+width: 50%;
+height: 100%;
+transform: translateX(-100%);
+transition: 0s;
+
+
+}
+.slide.active .left-info{
+  transform: translateX(0);
+  z-index: 1;
+  transition: .3s ease;
+}
+.blur{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,255,255,.1);
+    backdrop-filter: blur(20px);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    -webkit-mask: linear-gradient(#000 0 0),
+    linear-gradient(#000 0 0);
+    -webkit-mask-clip: text, padding-box;
+    -webkit-mask-composite:xor;
+    padding-right: 20px;
+}
+.blur h1{
+    font-size: 250px;
+  text-shadow: 0 0 10px #fff;
+
+}
+.contant{
+    position: absolute;
+    bottom: 8%;
+    left: 10%;
+    color: #fff;
+}
+.contant h3{
+    font-size: 20px;
+
+}
+.contant p{
+    font-size: 18px;
+    margin: 10px 0 15px ;
+}
+.btn{
+    display: inline-block;
+    padding: 13px 28px;
+    background: #fff;
+    border: solid 2px #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    font-size: 16px;
+    color: #000;
+    font-weight: 600;
+    transition: .4s;
+}
+.btn:hover{
+    color: #fff;
+    background:transparent;
+}
+.slide .right-info{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    display: flex;
+   align-items: center;
+   transform: translateX(100%);
+   transition: 0s;
+}
+.slide.active .right-info{
+transform: translateX(0%);
+z-index: 1;
+transition: .5s ease;
+
+
+
+}
+.right-info  h1{
+    color: #fff;
+    font-size: 250px;
+text-shadow:
+ 0 1px 0 #ccc
+ 0 2px 0 #afca99
+ 0 3px 0 #ccc
+ 0 4px 0 #afca99
+ 0 5px 0 #afca99
+0 6px 0  #afca99 
+ ;
+}
+.right-info h3{
+    position: absolute;
+    transform: translateY(200%);
+    font-size: 80px;
+    margin-left: 20px;
+    color: #fff;
+    text-shadow: 0 0 10px #fff;
+}
+.navigtion{
+    position: absolute;
+    bottom: 8%;
+    right: 5%;
+    z-index: 99;
+}
+.navigtion span {
+    display: inline-flex;
+justify-content: center;
+align-items: center;
+    width: 50px;
+    height: 50px;
+    border: solid 2px #fff;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,.5);
+    cursor: pointer;
+    margin-left: 25px;
+    transition: .5s;
+}
+span i{
+    font-size: 45px;
+    color: #444;
+    transition: .5s;
+  }
+.navigtion span:nth-child(1) 
+{
+    background: transparent; 
+}
+.navigtion span:nth-child(1):hover{
+    background-color: #fff;
+  
+}
+.navigtion span:nth-child(1) i
+{
+    color: #fff;
+}
+.navigtion span:nth-child(1):hover i
+{
+    color: #444;
+}
+
